@@ -1,0 +1,16 @@
+list1 = ['R', 'G', 'B', 'G', 'G', 'R', 'B', 'B', 'G']
+
+low_color,mid_color,high_color=0,0,len(list1)-1
+
+while mid_color<=high_color:
+    if list1[mid_color]=='B':
+        list1[low_color],list1[mid_color]=list1[mid_color],list1[low_color]
+        mid_color+=1
+        low_color+=1 
+    elif list1[mid_color]=='G':
+        mid_color+=1
+    else:
+
+      list1[mid_color],list1[high_color]=list1[high_color],list1[mid_color]
+      high_color-=1
+print(list1)
